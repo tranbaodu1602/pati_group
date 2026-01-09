@@ -3,7 +3,15 @@ import iconbutton from "../assets/IconButton.png";
 import iconstar from "../assets/IconStar.png";
 import logo from "../assets/logo.avif";
 import payment from "../assets/payment.avif";
-import { product, accordionData } from "../utils/dataMock";
+import {
+  product,
+  accordionData,
+  marqueeLogos,
+  bloadingcell,
+  lymphaticContent,
+  featuresData,
+  faqData,
+} from "../utils/dataMock";
 import GridProduct from "../components/GridProduct";
 import CliniciansChoice from "../components/CliniciansChoice";
 import PricingList from "../features/PricingList";
@@ -15,6 +23,24 @@ import frameusa from "../assets/FrameUSA.webp";
 import RoundIcon from "../icons/roundIcon";
 import AccordionItem from "../components/AccordionItem";
 import Feedback from "../components/Feedback";
+import Slider from "../components/Slider";
+import whynotimg from "../assets/whynotimg.webp";
+import whynotimgmobile from "../assets/whynotimgmobile.webp";
+import aroundown from "../assets/aroundown.png";
+import symptom from "../assets/symptom.webp";
+import symptommobile from "../assets/symptommobile.webp";
+import StatusItem from "../components/StatusItem";
+import SessionContentLayout from "../components/SessionContentLayout";
+import WhyWorkedSection from "../features/WhyWorkedSection";
+import SystemRestore from "../features/SystemRestore";
+import greendesk from "../assets/greendeskt.webp";
+import LymphaticFreeButton from "../components/LymphaticFreeButton";
+import Faq from "../components/Faq";
+import MissionSection from "../features/MissionSection";
+import RestorationSection from "../features/RestorationSection";
+import ReviewSection from "../features/ReviewSection";
+import VideoSection from "../features/VideoSection";
+import Truspilot from "../assets/Trustpilot.webp";
 
 const rules = [
   {
@@ -32,12 +58,14 @@ const rules = [
 ];
 
 const SculptiquePage = () => {
+  //state + func opent/close accordionItem
   const [openId, setOpenId] = useState(null);
 
   const handleToggle = (id) => {
-    // Nếu click vào cái đang mở thì đóng lại (null), ngược lại thì mở cái mới
     setOpenId(openId === id ? null : id);
   };
+
+  // create slide product for mobile
   const mobileImages = [
     ...product.product2nd,
     ...product.product3nd,
@@ -88,7 +116,7 @@ const SculptiquePage = () => {
             </div>
 
             {/* DESKTOP */}
-            <div className="hidden md:block">
+            <div className="hidden md:block ">
               <GridProduct items={product.product2nd} cols={2} />
               <GridProduct items={product.product3nd} cols={3} />
               <GridProduct items={product.product4nd} cols={2} />
@@ -175,7 +203,7 @@ const SculptiquePage = () => {
               <Feedback {...product.testimonial} />
             </div>
 
-            <div className="mx-auto max-w-[800px] bg-white">
+            <div className="mx-auto max-w-200 bg-white">
               {accordionData.map((item) => (
                 <AccordionItem
                   key={item.id}
@@ -188,7 +216,294 @@ const SculptiquePage = () => {
             </div>
           </div>
         </div>
-        <div>ancbd</div>
+
+        {/* Slider -As Seen In */}
+        <Slider marqueeLogos={marqueeLogos} />
+
+        {/* Why Your Bloating..... */}
+        <div className="pt-14 md:px-12.5 px-4">
+          <div className="max-w-200 m-auto text-center">
+            <p className="leading-[1.3] my-4 md:text-[32px] text-[22px]">
+              Why Your{" "}
+              <span className="text-[#039869]">
+                Bloating, Brain Fog & Swollen Legs
+              </span>{" "}
+              Are Actually Connected
+            </p>
+            <p className="md:text-[18px] text-[12px] leading-[1.3] my-4">
+              If you're experiencing more than one of these symptoms, your body
+              is trying to tell you something:
+            </p>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mt-8.5">
+            {bloadingcell.map((item) => (
+              <div
+                key={item.id}
+                className="flex-1 flex flex-row md:flex-col overflow-hidden rounded-md border border-gray-100"
+              >
+                <div className="w-[120px] h-[120px] min-w-[120px] md:w-full md:h-[184px]">
+                  <img
+                    src={item.urlImage}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 flex items-center justify-center bg-[#f7f7f7] p-4 text-center min-h-[100px] md:min-h-37.5 leading-[1.3] text-[16px]">
+                  {item.content}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <img
+              src={whynotimg}
+              alt=""
+              className="max-w-[920px] w-full hidden md:block"
+            />
+
+            <img
+              src={whynotimgmobile}
+              alt=""
+              className="max-w-230 w-full md:hidden block mt-8 mb-6"
+            />
+          </div>
+          <div>
+            <img
+              src={aroundown}
+              alt=""
+              className="max-w-12 w-full md:my-12 mb-2 mx-auto block"
+            />
+          </div>
+          {/* The Connection You've Been Missing */}
+          <div className="md:mb-4 max-w-200 m-auto text-center">
+            <h2 className="md:text-[34px] text-[28px]  leading-[1.3] font-lora">
+              The Connection
+              <span className="text-[#039869]"> You've Been Missing</span>
+            </h2>
+          </div>
+          <div className="w-full flex items-center justify-center">
+            <img
+              src={symptom}
+              alt=""
+              className="max-w-230 w-full hidden md:block"
+            />
+            <img
+              src={symptommobile}
+              alt=""
+              className="max-w-230 w-full md:hidden block mt-3 mb-6"
+            />
+          </div>
+          <div>
+            <img
+              src={aroundown}
+              alt=""
+              className="max-w-12 w-full md:my-7 mx-auto block"
+            />
+          </div>
+          {/* Your Hidden Drainage System */}
+          <div className="md:mb-10 mb-5 text-center">
+            <h2 className="text-[28px] md:text-[34px] leading-[1.3] font-lora">
+              Your <span className="text-[#039869]"> Hidden</span> Drainage
+              System
+            </h2>
+          </div>
+          <div className="w-full md:space-y-14 space-y-10">
+            {/* Part 1:  */}
+            <SessionContentLayout
+              image={lymphaticContent.section1.image}
+              isReverse={true}
+            >
+              <div className="space-y-2">
+                <p className="md:text-[17px] text-[15px] leading-relaxed">
+                  Your lymphatic system is your body's internal cleaning crew—a
+                  network of vessels that processes{" "}
+                  <span className="font-bold">
+                    3-4 liters of cellular waste and excess fluid every single
+                    day.
+                  </span>
+                </p>
+                <p className="text-[17px]">
+                  When it's working properly, you don't even know it exists.
+                </p>
+
+                <ul className="space-y-2 pb-2">
+                  {lymphaticContent.section1.benefits.map((item, i) => (
+                    <StatusItem key={i} text={item} type="check" />
+                  ))}
+                </ul>
+
+                <div className="bg-[#ffe3e3] p-4 rounded-md text-lg leading-[1.3]">
+                  But after age 35, declining estrogen hijacks this system's
+                  ability to function.
+                </div>
+
+                <ul className="space-y-2 pt-2">
+                  {lymphaticContent.section1.failures.map((item, i) => (
+                    <StatusItem key={i} text={item} type="x" />
+                  ))}
+                </ul>
+                <p className="text-[18px] leading-[1.3]">
+                  Instead of processing and removing waste, it backs up in your
+                  tissues.
+                </p>
+              </div>
+            </SessionContentLayout>
+
+            {/* Part 2: (isReverse=false) setup layout img/content */}
+            <SessionContentLayout image={lymphaticContent.section2.image}>
+              <h3 className="leading-[1.3] text-lg font-bold">
+                {lymphaticContent.section2.textTop}
+              </h3>
+              <p className="leading-[1.3] text-lg">
+                {lymphaticContent.section2.description}
+              </p>
+
+              <div className="bg-[#ffe3e3] px-4 py-4 rounded-xl space-y-4">
+                <p className="text-lg leading-[1.3]">
+                  The metabolic waste your cells produce overnight? It's still
+                  sitting there at noon. At dinner. While you're trying to fall
+                  asleep.
+                </p>
+                <ul className="space-y-2">
+                  {lymphaticContent.section2.symptoms.map((item, i) => (
+                    <StatusItem key={i} text={item} type="x" />
+                  ))}
+                </ul>
+              </div>
+
+              <div className="leading-[1.3] text-lg space-y-2">
+                <p className="font-bold">
+                  Your cells are literally sitting in their own waste—and your
+                  body can't flush it out.
+                </p>
+                <p>
+                  The longer this goes on, the worse it gets. More congestion.
+                  More inflammation. More pressure on an already compromised
+                  system.
+                </p>
+              </div>
+            </SessionContentLayout>
+          </div>
+        </div>
+        {/*  */}
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[56px]">
+          <WhyWorkedSection />
+        </div>
+        {/* Syste, Restore */}
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[56px]">
+          <SystemRestore />
+        </div>
+        {/* comment */}
+        <div className=" md:px-12.5 px-4 my-[56px]">
+          <ReviewSection />
+        </div>
+        {/*Regulation  */}
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 ">
+          <div className="py-8">
+            <div className="mx-2 grid grid-cols-2 lg:grid-cols-4 gap-6">
+              {featuresData.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex flex-col items-center text-center p-2"
+                >
+                  <img
+                    src={item.icon}
+                    alt={item.title}
+                    className="h-10 w-10 object-contain block mb-4"
+                  />
+
+                  <h3 className="m-2 font-nunito leading-[1.3] text-base font-semibold">
+                    {item.title}
+                  </h3>
+
+                  <span className=" text-base leading-[1.3] font-nunito">
+                    {item.subtitle}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Expert Advice  */}
+        <div className="my-14 mx-[5.5px] md:px-12.5 px-3">
+          <div className="flex flex-col lg:flex-row items-stretch bg-[#f7f7f7] rounded-2xl overflow-hidden">
+            {/* Cột Nội dung: Căn giữa theo chiều dọc để cân bằng với ảnh */}
+            <div className="order-2 lg:order-1 flex-1 p-6 lg:p-10 flex flex-col justify-center">
+              <span className="text-[#737373] text-base leading-[1.3] font-nunito block">
+                July 4th, 2025
+              </span>
+
+              <h2 className="text-2xl lg:text-[31px] md:my-6 my-3 leading-[1.3] font-lora">
+                Expert Advice from Dr. Emily Chen of a Premier New York Skin
+                Clinic
+              </h2>
+
+              <div className="space-y-4 text-[18px] leading-[1.4] font-nunito">
+                <p>
+                  “Your nutrition plays a powerful role in your appearance. If
+                  your body is missing key vitamins and nutrients, it can’t
+                  process fat and upkeep healthy connective tissue, which is why
+                  unprocessed fat flows up and starts pushing up against your
+                  skin, forming bumps you know as cellulite.
+                </p>
+
+                <p>
+                  SmoothSkin by Sculptique™ contains ingredients that are
+                  scientifically proven to enhance microcirculation, boost
+                  lymphatic drainage, and reduce inflammation, which restores
+                  your tissue and breaks down the fat cells in your skin.”
+                </p>
+              </div>
+
+              <div className="mt-8 flex flex-col items-start">
+                <LymphaticFreeButton />
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2 w-full lg:w-1/2">
+              <img
+                src={greendesk}
+                alt="Dr. Emily Chen"
+                className="w-full h-full object-cover block rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Video Stories section */}
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 md:py-14 ">
+          <div className="w-full max-w-200 m-auto md:pt-0 pt-8 pb-2 flex items-center text-center justify-center flex-col">
+            <img src={Truspilot} alt="" className="max-w-75 block" />
+            <p className="my-4 font-lora leading-[1.3] md:text-[32px]  text-[26px]">
+              See The Stories of Sculptique™ Women Firsthand
+            </p>
+          </div>
+          <VideoSection />
+          <div className="flex items-center justify-center mt-8">
+            <LymphaticFreeButton />
+          </div>
+        </div>
+
+        {/* FAQ */}
+        <div className=" md:px-12.5 px-4 md:py-14 py-10 flex items-center justify-center flex-col">
+          <div className="my-4 md:text-[32px] text-[24px] leding-[1.3]">
+            Frequently Asked Questions
+          </div>
+          <div className="max-w-[824px] mx-auto rounded-2xl bg-[linear-gradient(180deg,#fff,#f8eaeab9)] overflow-hidden md:p-8 p-2 ">
+            <Faq faqData={faqData} />
+          </div>
+          <div className="mt-6">
+            <LymphaticFreeButton />
+          </div>
+        </div>
+        {/* Section Footer */}
+        <div className=" md:px-12.5 px-4 md:py-14 ">
+          <MissionSection />
+        </div>
+
+        <div className="bg-[#f7f2e7]  md:px-12.5 px-4 md:py-14">
+          <RestorationSection />
+        </div>
       </main>
     </div>
   );

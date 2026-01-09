@@ -3,3 +3,37 @@
 @theme {
   --font-sans: "Montserrat", sans-serif;
 }
+
+@theme {
+  --font-nunito: "Nunito", sans-serif;
+}
+@theme {
+  --font-lora: "Lora", serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.custom-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 12s linear infinite;
+}
+
+.font-lora {
+  font-family: "Lora", serif;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
