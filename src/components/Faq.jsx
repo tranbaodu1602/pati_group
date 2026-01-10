@@ -25,7 +25,7 @@ const Faq = ({ faqData }) => {
               onClick={() => toggleAccordion(item.id)}
               className="w-full py-5 px-6 flex justify-between items-center text-left hover:opacity-70 transition-all"
             >
-              <span className="text-[#333] font-nunito md:text-[17px] text-[16px] font-medium leading-tight">
+              <span className="text-[#333] font-nunito md:text-[18px] text-[16px] font-medium leading-tight">
                 {item.question}
               </span>
               <img

@@ -13,7 +13,7 @@ const WhyWorkedSection = () => {
       </h2>
 
       {/* Container cart */}
-      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-2">
+      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         {whyFailData.map((item) => (
           <div
             key={item.id}
@@ -29,7 +29,7 @@ const WhyWorkedSection = () => {
 
             {/* content*/}
             <div className="p-6 text-center">
-              <p className="text-lg text-gray-800 font-medium mb-8 leading-relaxed">
+              <p className="text-[20px] text-gray-800 font-medium tracking-wider mb-8 font-serif leading-[1.3]">
                 {item.title}
               </p>
 
@@ -41,7 +41,7 @@ const WhyWorkedSection = () => {
                     <img src={xIcon} alt="" className="max-w-6" />
                   </span>
                 </div>
-                <p className="text-sm md:text-base mt-3  leading-[1.3] font-nunito font-bold">
+                <p className="text-base mt-3 tracking-wide leading-[1.3] font-nunito font-bold">
                   {item.reason}
                 </p>
               </div>

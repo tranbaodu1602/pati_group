@@ -17,11 +17,11 @@ const SystemRestore = () => {
   return (
     <div className=" bg-[#f4f1ea] py-14 w-full">
       <div className="max-w-200 m-auto text-center">
-        <div className="my-4 font-normal md:text-[32px] text-[24px] leading-[1.3]">
+        <div className="my-4 font-normal md:text-[32px] font-lora tracking-wide text-[24px] leading-[1.3]">
           <span className="text-[#039869]">The 8-Ingredient System</span> That
           Restores What Hormones Once Maintained
         </div>
-        <p className="my-4 md:text-[19px] text-[17px] font-nunito leading-[1.3]">
+        <p className="md:text-lg tracking-wide text-[17px] font-nunito leading-[1.3]">
           Sculptique is the only formula that addresses ALL 6 mechanisms of
           lymphatic dysfunction simultaneously—not with symbolic doses, but with
           therapeutic amounts based on clinical research. <br /> Not just moving
@@ -53,14 +53,10 @@ const SystemRestore = () => {
               </div>
 
               <div className="w-full flex items-center gap-2 justify-between">
-                <div className="w-[20%]">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="md:hidden block w-full"
-                  />
+                <div className="w-[20%] md:hidden block">
+                  <img src={item.image} alt="" className=" w-full" />
                 </div>
-                <div className="text-base font-bold font-nunito leading-[1.3]">
+                <div className="text-base font-bold font-nunito leading-[1.3] tracking-wide">
                   <h5>{item.name}</h5>
                 </div>
                 <div className="max-w-6 ml-auto">

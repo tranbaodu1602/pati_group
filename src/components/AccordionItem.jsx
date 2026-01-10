@@ -12,17 +12,17 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
     >
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between p-3 text-left focus:outline-none"
+        className="flex w-full items-center justify-between px-4 py-3 text-left focus:outline-none"
       >
-        <span className={`text-base font-normal text-black`}>{title}</span>
+        <span
+          className={`text-base font-normal font-nunito leading-[1.3] text-black`}
+        >
+          {title}
+        </span>
 
         {/* Nút chứa Icon */}
         <div
-          className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${
-            isOpen
-              ? "bg-[#F2FBF9] text-[#1D9177]"
-              : "bg-[#F2FBF9] text-[#1D9177]"
-          }`}
+          className={`flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 `}
         >
           <div>
             <img

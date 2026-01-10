@@ -8,8 +8,8 @@ import Xicon from "../icons/Xicon";
 const CliniciansChoice = () => {
   const avatars = [people1, people2, people3];
   return (
-    <div className=" font-sans md:w-[73%]  flex flex-row justify-between w-96.75 pt-4 pb-4 pl-2 pr-0 gap-2.5 z-1">
-      <div className="flex items-center justify-center gap-1">
+    <div className=" font-sans md:w-[73%]  flex flex-row justify-between w-96.75 pt-4 pb-4 pl-2 pr-0 gap-1 z-1">
+      <div className="flex items-center justify-center gap-1 pr-1.5">
         <span className="">
           {" "}
           <LeafIconLeft />
@@ -23,7 +23,7 @@ const CliniciansChoice = () => {
           <LeafIconLeft />
         </span>
       </div>
-      <div className="flex text-[12px] flex-col gap-1.5">
+      <div className="flex text-[13px] leaidng-[1.3] font-nunito flex-col gap-1.5">
         <p>
           <span className="font-semibold">336 clinicians</span> share this on{" "}
           <span className="italic">FrontrowMD</span> without compensation. {""}

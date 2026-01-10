@@ -14,7 +14,7 @@ const SessionContentLayout = ({ children, image, isReverse = false }) => (
     <div
       className={`w-full ${
         isReverse ? "md:order-1" : "md:order-2"
-      } font-nunito space-y-4`}
+      } font-nunito space-y-2`}
     >
       {children}
     </div>

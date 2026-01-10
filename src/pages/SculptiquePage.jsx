@@ -86,7 +86,7 @@ const SculptiquePage = () => {
                 src={product.productImages}
                 alt="main-product"
               />
-              <div className="items-center absolute bottom-8 z-2 flex justify-center gap-2 leading-[1.2] max-w-[320px]  px-6 py-2  bg-white/85 border border-black rounded-3xl  cursor-pointer text-sm">
+              <div className="items-center  absolute bottom-8 z-2 flex justify-center gap-2 leading-[1.2] max-w-[320px]  px-7 py-2  bg-white/85 border border-black rounded-3xl  cursor-pointer text-sm tracking-wide">
                 <span>
                   <img
                     className="object-cover aspect-square rounded-lg overflow-hidden w-6"
@@ -116,7 +116,7 @@ const SculptiquePage = () => {
             </div>
 
             {/* DESKTOP */}
-            <div className="hidden md:block ">
+            <div className="hidden md:block space-y-2">
               <GridProduct items={product.product2nd} cols={2} />
               <GridProduct items={product.product3nd} cols={3} />
               <GridProduct items={product.product4nd} cols={2} />
@@ -127,21 +127,27 @@ const SculptiquePage = () => {
           <div>
             <div className="flex items-center mb-4 gap-4">
               <img src={iconstar} className="block w-25" alt="icon-star" />
-              <p className="text-base leading-[1.3] m-0  ">
-                {product.star} | 2,345 Reviews
+              <p className="md:text-base text-[10px] leading-[1.3] m-0  font-ninito tracking-wide">
+                {product.star}/5 Excellent | Based on 2381 Reviews
               </p>
             </div>
-            <h1 className="text-[28px] mt-4 leading-[1.4] font-lora font-normal">
+            <h1 className="text-[28px] mt-4 leading-[1.4] font-lora font-normal tracking-wide">
               {product.productTitle}
             </h1>
             {/* product feature */}
             <div>
               {product.feature.map((item) => (
                 <div key={item.id} className="flex items-center pt-4 gap-3">
-                  <div className="w-[9.5%] flex items-center">
-                    <img src={item.image} alt={item.img} />
+                  <div className="w-[9%] flex items-center">
+                    <img
+                      src={item.image}
+                      alt={item.img}
+                      className="w-full block"
+                    />
                   </div>
-                  <p className="text-base leading-[1.3] m-0">{item.content}</p>
+                  <p className="text-base font-nunito tracking-wide leading-[1.3] m-0">
+                    {item.content}
+                  </p>
                 </div>
               ))}
             </div>
@@ -159,7 +165,7 @@ const SculptiquePage = () => {
               <div>
                 <CarIcon />
               </div>
-              <p className="text-[12px] md:text-base">
+              <p className="text-[12px] md:text-base leading-[1.3] font-nunito">
                 Delivered on{" "}
                 <span className="text-white bg-[#039869] px-2 py-1 rounded-sm">
                   Tuesday, 13 January
@@ -173,16 +179,16 @@ const SculptiquePage = () => {
               <button>ADD TO CART</button>
             </div>
 
-            <div className="mt-4 flex items-center justify-center gap-4">
-              <div className="flex items-center justify-center gap-2">
+            <div className="mt-4 flex items-center justify-center gap-4 font-nunito">
+              <div className="flex items-center justify-center gap-2 ">
                 <RoundIcon />
-                <div className="pr-4 border-r text-[11px] md:text-sm">
-                  Refills Ship Monthly
+                <div className="pr-4 border-r text-[11px] md:text-base">
+                  Refills Ship Bi-Monthly
                 </div>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <img src={clock} alt="" className="h-5 w-5" />
-                <p className=" text-[11px] md:text-sm">
+                <p className=" text-[11px] md:text-base">
                   Stop or Cancel Anytime
                 </p>
               </div>
@@ -194,8 +200,10 @@ const SculptiquePage = () => {
             <div className="space-y-2 my-3">
               {rules.map((rule) => (
                 <div key={rule.id} className="flex gap-2 items-center">
-                  <img src={rule.image} alt="" className="w-[5%]" />
-                  <p className="m-0">{rule.content}</p>
+                  <img src={rule.image} alt="" className="w-[4.5%]" />
+                  <p className="m-0 leading-[1.3] text-base font-nunito tracking-wide">
+                    {rule.content}
+                  </p>
                 </div>
               ))}
             </div>
@@ -223,14 +231,14 @@ const SculptiquePage = () => {
         {/* Why Your Bloating..... */}
         <div className="pt-14 md:px-12.5 px-4">
           <div className="max-w-200 m-auto text-center">
-            <p className="leading-[1.3] my-4 md:text-[32px] text-[22px]">
+            <p className="leading-[1.3] font-lora my-4 md:text-[32px] text-[22px]">
               Why Your{" "}
               <span className="text-[#039869]">
                 Bloating, Brain Fog & Swollen Legs
               </span>{" "}
               Are Actually Connected
             </p>
-            <p className="md:text-[18px] text-[12px] leading-[1.3] my-4">
+            <p className="md:text-[18px] text-[16px] leading-[1.3] my-4 font-nunito md:px-2 px-0">
               If you're experiencing more than one of these symptoms, your body
               is trying to tell you something:
             </p>
@@ -241,14 +249,14 @@ const SculptiquePage = () => {
                 key={item.id}
                 className="flex-1 flex flex-row md:flex-col overflow-hidden rounded-md border border-gray-100"
               >
-                <div className="w-[120px] h-[120px] min-w-[120px] md:w-full md:h-[184px]">
+                <div className="w-[120px] h-[120px] min-w-[120px] md:w-full md:h-[184px] mb-3">
                   <img
                     src={item.urlImage}
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex-1 flex items-center justify-center bg-[#f7f7f7] p-4 text-center min-h-[100px] md:min-h-37.5 leading-[1.3] text-[16px]">
+                <div className="flex-1 flex items-start justify-center bg-[#f7f7f7] p-4 text-center min-h-[100px] md:min-h-37.5 leading-[1.3] text-[16px] font-nunito">
                   {item.content}
                 </div>
               </div>
@@ -271,7 +279,7 @@ const SculptiquePage = () => {
             <img
               src={aroundown}
               alt=""
-              className="max-w-12 w-full md:my-12 mb-2 mx-auto block"
+              className="max-w-12 w-full md:my-6 mb-1 mx-auto block"
             />
           </div>
           {/* The Connection You've Been Missing */}
@@ -297,7 +305,7 @@ const SculptiquePage = () => {
             <img
               src={aroundown}
               alt=""
-              className="max-w-12 w-full md:my-7 mx-auto block"
+              className="max-w-12 w-full md:my-6 mx-auto block"
             />
           </div>
           {/* Your Hidden Drainage System */}
@@ -314,7 +322,7 @@ const SculptiquePage = () => {
               isReverse={true}
             >
               <div className="space-y-2">
-                <p className="md:text-[17px] text-[15px] leading-relaxed">
+                <p className="md:text-[18px] text-[15px] leading-[1.3] font-nunito">
                   Your lymphatic system is your body's internal cleaning crew—a
                   network of vessels that processes{" "}
                   <span className="font-bold">
@@ -322,7 +330,7 @@ const SculptiquePage = () => {
                     day.
                   </span>
                 </p>
-                <p className="text-[17px]">
+                <p className="text-[18px] font-nunito leading-[1.3]">
                   When it's working properly, you don't even know it exists.
                 </p>
 
@@ -332,7 +340,7 @@ const SculptiquePage = () => {
                   ))}
                 </ul>
 
-                <div className="bg-[#ffe3e3] p-4 rounded-md text-lg leading-[1.3]">
+                <div className="bg-[#ffe3e3] p-4 my-4 rounded-md font-nunito text-lg leading-[1.3]">
                   But after age 35, declining estrogen hijacks this system's
                   ability to function.
                 </div>
@@ -342,7 +350,7 @@ const SculptiquePage = () => {
                     <StatusItem key={i} text={item} type="x" />
                   ))}
                 </ul>
-                <p className="text-[18px] leading-[1.3]">
+                <p className="text-[18px] font-nunito leading-[1.3]">
                   Instead of processing and removing waste, it backs up in your
                   tissues.
                 </p>
@@ -354,12 +362,12 @@ const SculptiquePage = () => {
               <h3 className="leading-[1.3] text-lg font-bold">
                 {lymphaticContent.section2.textTop}
               </h3>
-              <p className="leading-[1.3] text-lg">
+              <p className="leading-[1.3] text-lg font-nunito">
                 {lymphaticContent.section2.description}
               </p>
 
-              <div className="bg-[#ffe3e3] px-4 py-4 rounded-xl space-y-4">
-                <p className="text-lg leading-[1.3]">
+              <div className="bg-[#ffe3e3] p-4 my-6 rounded-xl space-y-4">
+                <p className="text-lg font-nunito leading-[1.3]">
                   The metabolic waste your cells produce overnight? It's still
                   sitting there at noon. At dinner. While you're trying to fall
                   asleep.
@@ -371,7 +379,7 @@ const SculptiquePage = () => {
                 </ul>
               </div>
 
-              <div className="leading-[1.3] text-lg space-y-2">
+              <div className="leading-[1.3] font-nunito tracking-wide text-lg space-y-2">
                 <p className="font-bold">
                   Your cells are literally sitting in their own waste—and your
                   body can't flush it out.
@@ -389,8 +397,8 @@ const SculptiquePage = () => {
         <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[56px]">
           <WhyWorkedSection />
         </div>
-        {/* Syste, Restore */}
-        <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[56px]">
+        {/* System Restore */}
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[35px]">
           <SystemRestore />
         </div>
         {/* comment */}
@@ -412,7 +420,7 @@ const SculptiquePage = () => {
                     className="h-10 w-10 object-contain block mb-4"
                   />
 
-                  <h3 className="m-2 font-nunito leading-[1.3] text-base font-semibold">
+                  <h3 className="m-2 font-nunito tracking-wider leading-[1.3] text-base font-semibold">
                     {item.title}
                   </h3>
 
@@ -434,12 +442,12 @@ const SculptiquePage = () => {
                 July 4th, 2025
               </span>
 
-              <h2 className="text-2xl lg:text-[31px] md:my-6 my-3 leading-[1.3] font-lora">
+              <h2 className="text-2xl lg:text-[32px] md:my-4 my-3 leading-[1.3] font-lora">
                 Expert Advice from Dr. Emily Chen of a Premier New York Skin
                 Clinic
               </h2>
 
-              <div className="space-y-4 text-[18px] leading-[1.4] font-nunito">
+              <div className="space-y-4 text-[18px] leading-[1.3] tracking-wide font-nunito">
                 <p>
                   “Your nutrition plays a powerful role in your appearance. If
                   your body is missing key vitamins and nutrients, it can’t
@@ -471,7 +479,7 @@ const SculptiquePage = () => {
           </div>
         </div>
         {/* Video Stories section */}
-        <div className="bg-[#f7f2e7] md:px-12.5 px-4 md:py-14 ">
+        <div className="bg-[#f7f2e7] md:px-12.5 px-4 md:py-14 pb-6 ">
           <div className="w-full max-w-200 m-auto md:pt-0 pt-8 pb-2 flex items-center text-center justify-center flex-col">
             <img src={Truspilot} alt="" className="max-w-75 block" />
             <p className="my-4 font-lora leading-[1.3] md:text-[32px]  text-[26px]">

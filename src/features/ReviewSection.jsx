@@ -51,15 +51,15 @@ const ReviewSection = () => {
         <p className="block max-w-50">
           <img src={tropilot} alt="" />
         </p>
-        <p className="text-[32px] font-lora py-4 leading-[1.3] ">
-          Real Women, Real Results: 93,000+ <br /> Transformations
+        <p className="md:text-[34px] text-[24px] font-lora md:mx-[25%] mx-0 py-4 leading-[1.3] ">
+          Real Women, Real Results: 93,000+ Transformations
         </p>
-        <p className="text-[18px] leading-[1.3] mb-4">
+        <p className="md:text-[18px] text-[15px] leading-[1.3] mb-4 mx-3">
           All reviews verified from actual paying customers
         </p>
       </div>
       <div className="py-6 px-4 text-center">
-        <p className="text-[24px] font-lora mb-6">Customers Reviews</p>
+        <p className="text-[24px] font-lora md:mb-3 mb-1">Customers Reviews</p>
         <div className="pb-6 border-b border-gray-100 ">
           <div className="flex flex-col md:flex-row items-center justify-center">
             {/* collum 1*/}
@@ -115,7 +115,7 @@ const ReviewSection = () => {
             </div>
           </div>
         </div>
-        <div className="w-full flex flex-col justify-center items-center my-9">
+        <div className="w-full flex flex-col justify-center items-center md:my-9 my-4">
           <img src={diamond} alt="" className="h-20 w-20" />
           <p className="text-[12px] text-[#4c8eda] font-bold">100.0</p>
         </div>
@@ -187,7 +187,7 @@ const ReviewSection = () => {
       </div>
       {/* List comment */}
       <div className="mx-4 mt-3">
-        <div className="space-y-2 mb-12">
+        <div className="space-y-2 md:mb-4 mb-2">
           {currentItems.map((item) => (
             <div key={item.id} className="border-b border-gray-100 pb-6">
               <div className="flex justify-between items-start mb-2">
@@ -214,7 +214,7 @@ const ReviewSection = () => {
         </div>
 
         {/* PAGINATION UI (*/}
-        <div className="flex justify-center items-center gap-4 mt-10 select-none">
+        <div className="flex justify-center items-center gap-4 md:mb-22 mb-2 mt-1 select-none">
           {/* First & Prev */}
           <span
             onClick={() => setCurrentPage(1)}

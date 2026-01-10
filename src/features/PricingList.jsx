@@ -15,7 +15,7 @@ const PricingList = () => {
   const [selectedId, setSelectedId] = useState("bottle-1");
 
   return (
-    <div className="space-y-3 ">
+    <div className="space-y-3 font-nunito">
       {PRICING_DATA.map((item) => (
         <div
           key={item.id}
@@ -32,7 +32,7 @@ const PricingList = () => {
               <BadgeIcon />
             </div>
           )}
-          {/* Header hiển thị Title và Price */}
+          {/* Header*/}
           <div className="p-4 bg-white flex justify-between items-center rounded-t-[10px]">
             <div className="flex items-center gap-3">
               {/* <RadioButton active={selectedId === item.id} /> */}
@@ -63,7 +63,7 @@ const PricingList = () => {
             </div>
           </div>
 
-          {/* Footer hiển thị danh sách Benefits */}
+          {/* Footer */}
           <div
             className={`bg-[#039869] rounded-b-[10px] text-white transition-opacity duration-300 ${
               selectedId === item.id ? "opacity-100" : "opacity-60"
@@ -72,7 +72,7 @@ const PricingList = () => {
             {item.benefits.map((benefit) => (
               <div
                 key={benefit.id}
-                className="flex items-center gap-2 px-2 py-1 border-t border-white text-sm font-medium"
+                className="flex items-center gap-2 px-2 py-1 border-t border-white text-xs leading-1 font-nunito font-medium"
               >
                 <img
                   src={ICON_PRICING[benefit.type]}

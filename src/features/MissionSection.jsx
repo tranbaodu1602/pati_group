@@ -6,7 +6,7 @@ import cusstomerpuffi from "../assets/puffi.webp"; // Ảnh chứa lọ thuốc 
 
 const MissionSection = () => {
   return (
-    <div className="max-w-[1200px] mx-auto w-full md:px-7 px-5 py-15 md:py-0 font-nunito">
+    <div className="max-w-[1200px] mx-auto w-full md:px-7 px-5 py-7  md:py-0 font-nunito">
       {/* Container chính: Mobile xếp dọc (flex-col), Desktop xếp ngang (lg:flex-row) */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-1 lg:gap-12">
         {/* Cột Nội dung bên trái */}

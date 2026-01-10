@@ -28,11 +28,13 @@ const Feedback = ({ name, avatar, rating, title, feedback }) => {
       </div>
 
       {/* Body: Nội dung đánh giá */}
-      <div className="space-y-3">
-        <h5 className=" text-[#1A1A1A] font-medium text-base tracking-tight">
+      <div className="space-y-2">
+        <h5 className=" text-[#1A1A1A] font-medium text-base tracking-wide leading-[1.3] font-nunito">
           {title}
         </h5>
-        <p className="text-black leading-[1.6] text-[14px]">{feedback}</p>
+        <p className="text-black font-medium font-nunito leading-[1.3] text-base">
+          {feedback}
+        </p>
       </div>
     </div>
   );

@@ -5,7 +5,8 @@ import { Listvideo } from "../utils/dataMock";
 
 const VideoSection = () => {
   const scrollRef = useRef(null);
-  const [playingId, setPlayingId] = useState(null); // Lưu ID video đang phát
+  const videoRefs = useRef({});
+  const [playingId, setPlayingId] = useState(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleScroll = () => {
@@ -18,11 +19,11 @@ const VideoSection = () => {
     }
   };
 
-  // Logic: Mỗi lần click scroll đúng 1 video
+  // Scroll by Item
   const scrollOneItem = (direction) => {
     if (scrollRef.current) {
-      const item = scrollRef.current.firstChild; // Lấy item đầu tiên để đo kích thước
-      const itemWidth = item.offsetWidth + 16; // Chiều rộng item + gap (16px)
+      const item = scrollRef.current.firstChild;
+      const itemWidth = item.offsetWidth + 16;
 
       scrollRef.current.scrollBy({
         left: direction === "next" ? itemWidth : -itemWidth,
@@ -32,10 +33,15 @@ const VideoSection = () => {
   };
 
   const handlePlayVideo = (id) => {
-    if (playingId === id) {
-      setPlayingId(null); // Nếu đang phát mà bấm lại thì dừng
-    } else {
-      setPlayingId(id); // Phát video được chọn
+    if (playingId && videoRefs.current[playingId]) {
+      videoRefs.current[playingId].pause();
+    }
+    setPlayingId(id);
+    // Phát video ngay khi click icon play không đợi bậy video control của thẻ video
+    if (videoRefs.current[id]) {
+      videoRefs.current[id].play().catch((error) => {
+        console.error("Video play failed:", error);
+      });
     }
   };
 
@@ -55,11 +61,12 @@ const VideoSection = () => {
                        snap-start overflow-hidden rounded-lg shadow-md aspect-[9/16] bg-black"
           >
             <video
+              ref={(el) => (videoRefs.current[item.id] = el)}
               src={item.urlVideo}
               className="w-full h-full object-cover"
-              controls={playingId === item.id} // Chỉ hiện thanh điều khiển khi đang phát
-              autoPlay={playingId === item.id}
+              controls={playingId === item.id}
               loop
+              muted={playingId !== item.id}
               onClick={() => handlePlayVideo(item.id)}
             />
 
