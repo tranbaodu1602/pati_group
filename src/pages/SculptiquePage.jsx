@@ -15,12 +15,11 @@ import {
 import GridProduct from "../components/GridProduct";
 import CliniciansChoice from "../components/CliniciansChoice";
 import PricingList from "../features/PricingList";
-import CarIcon from "../icons/carIcon";
 import CTA from "../assets/CTA_banner.avif";
 import clock from "../assets/clock.webp";
 import icon60day from "../assets/60day.webp";
 import frameusa from "../assets/FrameUSA.webp";
-import RoundIcon from "../icons/roundIcon";
+import RoundIcon from "../icons/roundIcon.jsx";
 import AccordionItem from "../components/AccordionItem";
 import Feedback from "../components/Feedback";
 import Slider from "../components/Slider";
