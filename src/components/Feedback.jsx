@@ -3,7 +3,7 @@ import customerprenium from "../assets/customer.avif";
 const Feedback = ({ name, avatar, rating, title, feedback }) => {
   return (
     <div className=" max-w-[650px] font-sans ">
-      {/* Header: Avatar và Thông tin */}
+      {/* Header */}
       <div className="flex items-center gap-4 mb-4">
         <img
           src={avatar}
@@ -27,7 +27,7 @@ const Feedback = ({ name, avatar, rating, title, feedback }) => {
         </div>
       </div>
 
-      {/* Body: Nội dung đánh giá */}
+      {/* Body:*/}
       <div className="space-y-2">
         <h5 className=" text-[#1A1A1A] font-medium text-base tracking-wide leading-[1.3] font-nunito">
           {title}

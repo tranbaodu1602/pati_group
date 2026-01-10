@@ -77,7 +77,7 @@ const SculptiquePage = () => {
         <img className="block m-auto max-w-40" src={logo} alt="logo" />
       </div>
       <main className="w-full">
-        {/* main product */}
+        {/* main product ------*/}
         <div className="py-8 md:px-12.5 px-4 grid xl:grid-cols-2 grid-cols-1 md:gap-16">
           <div>
             <div className=" relative flex justify-center">
@@ -123,7 +123,7 @@ const SculptiquePage = () => {
             </div>
           </div>
 
-          {/* product review */}
+          {/* ------product review------ */}
           <div>
             <div className="flex items-center mb-4 gap-4">
               <img src={iconstar} className="block w-25" alt="icon-star" />
@@ -225,10 +225,10 @@ const SculptiquePage = () => {
           </div>
         </div>
 
-        {/* Slider -As Seen In */}
+        {/* ------Slider -As Seen In ------*/}
         <Slider marqueeLogos={marqueeLogos} />
 
-        {/* Why Your Bloating..... */}
+        {/*------ Why Your Bloating..... ------*/}
         <div className="pt-14 md:px-12.5 px-4">
           <div className="max-w-200 m-auto text-center">
             <p className="leading-[1.3] font-lora my-4 md:text-[32px] text-[22px]">
@@ -282,7 +282,7 @@ const SculptiquePage = () => {
               className="max-w-12 w-full md:my-6 mb-1 mx-auto block"
             />
           </div>
-          {/* The Connection You've Been Missing */}
+          {/* ------The Connection You've Been Missing------ */}
           <div className="md:mb-4 max-w-200 m-auto text-center">
             <h2 className="md:text-[34px] text-[28px]  leading-[1.3] font-lora">
               The Connection
@@ -308,7 +308,7 @@ const SculptiquePage = () => {
               className="max-w-12 w-full md:my-6 mx-auto block"
             />
           </div>
-          {/* Your Hidden Drainage System */}
+          {/* ------Your Hidden Drainage System ------*/}
           <div className="md:mb-10 mb-5 text-center">
             <h2 className="text-[28px] md:text-[34px] leading-[1.3] font-lora">
               Your <span className="text-[#039869]"> Hidden</span> Drainage
@@ -393,19 +393,19 @@ const SculptiquePage = () => {
             </SessionContentLayout>
           </div>
         </div>
-        {/*  */}
+        {/* ------Ưhy not work------ */}
         <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[56px]">
           <WhyWorkedSection />
         </div>
-        {/* System Restore */}
+        {/*------ System Restore ------*/}
         <div className="bg-[#f7f2e7] md:px-12.5 px-4 mt-[35px]">
           <SystemRestore />
         </div>
-        {/* comment */}
+        {/*------ Comment list ------*/}
         <div className=" md:px-12.5 px-4 my-[56px]">
           <ReviewSection />
         </div>
-        {/*Regulation  */}
+        {/*------Regulation ------ */}
         <div className="bg-[#f7f2e7] md:px-12.5 px-4 ">
           <div className="py-8">
             <div className="mx-2 grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -433,10 +433,10 @@ const SculptiquePage = () => {
           </div>
         </div>
 
-        {/* Expert Advice  */}
+        {/* ------Expert Advice ------ */}
         <div className="my-14 mx-[5.5px] md:px-12.5 px-3">
           <div className="flex flex-col lg:flex-row items-stretch bg-[#f7f7f7] rounded-2xl overflow-hidden">
-            {/* Cột Nội dung: Căn giữa theo chiều dọc để cân bằng với ảnh */}
+            {/* Content */}
             <div className="order-2 lg:order-1 flex-1 p-6 lg:p-10 flex flex-col justify-center">
               <span className="text-[#737373] text-base leading-[1.3] font-nunito block">
                 July 4th, 2025
@@ -478,7 +478,7 @@ const SculptiquePage = () => {
             </div>
           </div>
         </div>
-        {/* Video Stories section */}
+        {/*------ Video Stories section ------*/}
         <div className="bg-[#f7f2e7] md:px-12.5 px-4 md:py-14 pb-6 ">
           <div className="w-full max-w-200 m-auto md:pt-0 pt-8 pb-2 flex items-center text-center justify-center flex-col">
             <img src={Truspilot} alt="" className="max-w-75 block" />
@@ -492,7 +492,7 @@ const SculptiquePage = () => {
           </div>
         </div>
 
-        {/* FAQ */}
+        {/* ------FAQ ------*/}
         <div className=" md:px-12.5 px-4 md:py-14 py-10 flex items-center justify-center flex-col">
           <div className="my-4 md:text-[32px] text-[24px] leding-[1.3]">
             Frequently Asked Questions
@@ -504,11 +504,11 @@ const SculptiquePage = () => {
             <LymphaticFreeButton />
           </div>
         </div>
-        {/* Section Footer */}
+        {/*------ Section Footer------ */}
         <div className=" md:px-12.5 px-4 md:py-14 ">
           <MissionSection />
         </div>
-
+        {/* ------Restore ------ */}
         <div className="bg-[#f7f2e7]  md:px-12.5 px-4 md:py-14">
           <RestorationSection />
         </div>

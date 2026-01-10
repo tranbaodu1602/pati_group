@@ -1,7 +1,6 @@
 import checkIcon from "../assets/checkIcon.png";
 import xIcon from "../assets/xIcon.png";
 
-// Component con để tái sử dụng cho các dòng có icon
 const StatusItem = ({ key, text, type = "check" }) => {
   const isCheck = type === "check" ? checkIcon : xIcon;
   const colorText = type === "check" ? "text-[#0c7c00]" : "text-[#a60003]";
