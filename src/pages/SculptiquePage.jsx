@@ -19,7 +19,7 @@ import CTA from "../assets/CTA_banner.avif";
 import clock from "../assets/clock.webp";
 import icon60day from "../assets/60day.webp";
 import frameusa from "../assets/FrameUSA.webp";
-import RoundIcon from "../icons/roundIcon.jsx";
+import RoundIcon from "../icons/RoundIcon";
 import AccordionItem from "../components/AccordionItem";
 import Feedback from "../components/Feedback";
 import Slider from "../components/Slider";
