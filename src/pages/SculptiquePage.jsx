@@ -40,6 +40,7 @@ import RestorationSection from "../features/RestorationSection";
 import ReviewSection from "../features/ReviewSection";
 import VideoSection from "../features/VideoSection";
 import Truspilot from "../assets/Trustpilot.webp";
+import CarIcon from "../icons/CarIcon";
 
 const rules = [
   {
